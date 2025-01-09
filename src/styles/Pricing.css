@@ -1,0 +1,29 @@
+.pricing {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pricing h1 {
+    color: #0A7E07;
+  }
+  
+  .pricing ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pricing ul li {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .pricing ul li a {
+    text-decoration: none;
+    color: #0A7E07;
+  }
+  
+  .pricing ul li a:hover {
+    color: #086005;
+    text-decoration: underline;
+  }
+  
