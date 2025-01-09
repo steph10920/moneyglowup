@@ -1,0 +1,32 @@
+.solutions {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .solutions h1 {
+    color: #0A7E07; /* Safaricom Green */
+    margin-bottom: 20px;
+  }
+  
+  .solutions ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .solutions ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .solutions ul li a {
+    color: #0A7E07;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .solutions ul li a:hover {
+    text-decoration: underline;
+    color: #086005; /* Darker Green */
+  }
+  

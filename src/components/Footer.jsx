@@ -3,7 +3,7 @@ import "../styles/Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer>
       <p>&copy; 2025 Money Glowup. All rights reserved.</p>
       <p>
         <a href="#privacy-policy">Privacy Policy</a> |{" "}

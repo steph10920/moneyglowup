@@ -1,37 +1,42 @@
 .header {
-    background-color: #0A7E07; /* Safaricom green */
+    background-color: #0A7E07; /* Safaricom Green */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #086005; /* Darker green border */
   }
   
   .header h1 {
-    font-size: 1.5rem;
-    color: #FFFFFF; /* White text */
+    color: #FFFFFF;
     margin: 0;
+    font-size: 1.5rem;
   }
   
   .nav {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
   }
   
   .nav a {
+    color: #FFFFFF;
     text-decoration: none;
-    color: #FFFFFF; /* White text */
     font-weight: bold;
-    font-size: 1rem;
   }
   
   .nav a:hover {
-    color: #C6E6C6; /* Light green hover */
+    color: #C6E6C6; /* Light Green */
   }
   
+  /* Dropdown styles */
   .dropdown {
     position: relative;
+  }
+  
+  .dropdown-toggle {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
   }
   
   .dropdown-menu {
@@ -39,23 +44,23 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #FFFFFF; /* White dropdown background */
-    border: 1px solid #086005; /* Safaricom green border */
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
     z-index: 10;
   }
   
   .dropdown-menu a {
     display: block;
     padding: 10px 20px;
-    color: #0A7E07; /* Safaricom green text */
+    color: #0A7E07;
     text-decoration: none;
     font-size: 0.9rem;
   }
   
   .dropdown-menu a:hover {
-    background-color: #ffffff; /* Light green hover */
+    background-color: #F0F0F0;
   }
   
   .dropdown:hover .dropdown-menu {

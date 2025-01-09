@@ -10,6 +10,16 @@ const Header = () => {
       </div>
       <nav className="nav">
         <Link to="/">Home</Link>
+        <div className="dropdown">
+          <Link to="/solutions" className="dropdown-toggle">Solutions</Link>
+          <div className="dropdown-menu">
+            <Link to="/setting-smart-goals">Setting SMART Financial Goals</Link>
+            <Link to="/budgeting">Budgeting</Link>
+            <Link to="/saving">Saving</Link>
+            <Link to="/investing">Investing</Link>
+            <Link to="/wealth-creation">Wealth Creation</Link>
+          </div>
+        </div>
         <Link to="/resources">Resources</Link>
         <Link to="/pricing">Pricing</Link>
         <Link to="/contact">Contact</Link>

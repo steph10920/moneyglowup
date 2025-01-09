@@ -1,33 +1,112 @@
-body {
-    font-family: Arial, sans-serif;
+/* Ensure the body and root container take up the full height of the viewport */
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Make the main app container stretch to fill the height */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main content expands to fill the available space */
+  .main-content {
+    flex: 1; /* Ensures the main content stretches to fill the remaining height */
+    padding: 20px;
+  }
+  /* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
     background-color: #f9f9f9;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-text {
+    max-width: 400px;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
     color: #333;
   }
   
-  .main-content {
-    flex: 1;
-    padding: 20px;
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
   }
   
-  .hero {
-    text-align: center;
-    padding: 40px;
-    background-color: #0a7e07;
+  .hero-text button {
+    background-color: #0A7E07;
     color: white;
-  }
-  
-  .hero button {
     padding: 10px 20px;
-    color: #0a7e07;
-    background-color: white;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
   }
   
-  .hero button:hover {
-    background-color: #f0f0f0;
+  .hero-text button:hover {
+    background-color: #086005;
+  }
+  
+  /* Hero Images Styling */
+  .hero-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .hero-image {
+    max-width: 300px; /* Adjust the max width as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  .hero-image:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  /* Footer sticks to the bottom */
+  footer {
+    background-color: #0A7E07; /* Safaricom Green */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+  }
+  
+  footer a {
+    color: #C6E6C6;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
   }
   
