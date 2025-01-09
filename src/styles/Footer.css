@@ -1,0 +1,19 @@
+.footer {
+    background-color: #0A7E07; /* Safaricom green */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+  
+  .footer a {
+    color: #C6E6C6; /* Light green text */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: #FFFFFF; /* White on hover */
+  }
+  
