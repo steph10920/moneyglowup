@@ -1,31 +1,33 @@
+/* General header styles */
 .header {
     background-color: #0A7E07; /* Safaricom Green */
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align logo and navigation */
     align-items: center;
   }
   
-  .header h1 {
-    color: #FFFFFF;
+  .logo h1 {
+    font-size: 1.8rem;
+    color: white;
     margin: 0;
-    font-size: 1.5rem;
+    font-weight: bold;
   }
   
   .nav {
     display: flex;
-    align-items: center;
     gap: 20px;
+    align-items: center;
   }
   
   .nav a {
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
     font-weight: bold;
   }
   
   .nav a:hover {
-    color: #C6E6C6; /* Light Green */
+    text-decoration: underline;
   }
   
   /* Dropdown styles */
@@ -34,36 +36,49 @@
   }
   
   .dropdown-toggle {
-    color: #FFFFFF;
-    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
     font-weight: bold;
+    padding: 10px 15px; /* Add padding to create a clickable area */
   }
   
+  /* Dropdown menu is hidden by default */
   .dropdown-menu {
-    display: none;
     position: absolute;
-    top: 100%;
+    top: 100%; /* Position directly below the "Solutions" button */
     left: 0;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     padding: 10px 0;
-    z-index: 10;
+    list-style: none;
+    display: none; /* Initially hidden */
+    min-width: 200px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Show dropdown menu when hovering near "Solutions" or the dropdown menu itself */
+  .dropdown:hover .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block;
+  }
+  
+  /* Dropdown menu items */
+  .dropdown-menu li {
+    margin: 0; /* Remove unnecessary gaps */
   }
   
   .dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #0A7E07;
+    color: #0A7E07; /* Safaricom Green */
     text-decoration: none;
-    font-size: 0.9rem;
+    font-weight: normal;
+    padding: 10px 15px; /* Add padding for better clickability */
+    display: block;
   }
   
   .dropdown-menu a:hover {
-    background-color: #F0F0F0;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
+    background-color: #f0f0f0; /* Highlight the item on hover */
   }
   
