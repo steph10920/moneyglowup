@@ -10,29 +10,75 @@
   }
   
   .resources p {
-    font-size: 1.1rem;
+    margin-bottom: 30px;
     color: #333;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
   }
   
-  .resources ul {
-    list-style: none;
-    padding: 0;
+  .template-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   
-  .resources ul li {
-    margin: 10px 0;
-    font-size: 1rem;
+  .template-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .resources ul li a {
-    color: #0A7E07;
+  .template-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .template-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .template-icon {
+    width: 30px; /* Icon width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded edges */
+    margin-right: 10px; /* Space between icon and text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .template-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .template-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .download-button {
+    display: inline-block;
+    background-color: #0A7E07;
+    color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
     font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
-  .resources ul li a:hover {
-    text-decoration: underline;
-    color: #086005; /* Darker Green */
+  .download-button:hover {
+    background-color: #086005; /* Darker Green */
   }
   
