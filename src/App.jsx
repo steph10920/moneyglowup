@@ -44,7 +44,6 @@ const App = () => {
                     </div>
                   </div>
                 </section>
-
                 {/* Features Section */}
                 <section id="features-section" className="features">
                   <h2>Our Services</h2>

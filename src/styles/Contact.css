@@ -1,29 +1,90 @@
+/* General Contact Page Styles */
 .contact {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .contact h1 {
-    color: #0A7E07;
-    margin-bottom: 20px;
-  }
-  
-  .contact ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact ul li {
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-  
-  .contact ul li a {
-    color: #0A7E07;
-    text-decoration: none;
-  }
-  
-  .contact ul li a:hover {
-    text-decoration: underline;
-  }
-  
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0A7E07; /* Safaricom Green */
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact ul li {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.contact ul a {
+  color: #0A7E07; /* Safaricom Green */
+  text-decoration: none;
+}
+
+.contact ul a:hover {
+  text-decoration: underline;
+}
+
+/* About Us Section */
+.contact-about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  color: #0A7E07; /* Safaricom Green */
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-text strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Contact Details Section */
+.contact-details {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-details h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #0A7E07;
+}
