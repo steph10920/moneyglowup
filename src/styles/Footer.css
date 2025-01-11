@@ -1,40 +1,45 @@
 /* Footer Styles */
 footer {
-    background-color: #0A7E07; /* Safaricom Green */
-    color: white;
-    text-align: center;
-    padding: 20px 0; /* Add padding for better spacing */
-    font-size: 0.9rem;
-    flex-shrink: 0; /* Prevent the footer from shrinking */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: relative;
-  }
-  
-  footer a {
-    color: #C6E6C6; /* Light green for links */
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  footer a:hover {
-    color: white; /* Change to white on hover */
-    text-decoration: underline; /* Add underline on hover */
-  }
-  
-  footer .social-icons {
-    margin: 15px 0; /* Add spacing above social icons */
-  }
-  
-  footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-    color: white;
-    font-size: 1.5rem;
-    transition: transform 0.2s ease, color 0.3s ease;
-  }
-  
-  footer .social-icons a:hover {
-    color: #C6E6C6; /* Light green on hover */
-    transform: scale(1.2); /* Slight zoom effect */
-  }
-  
+  background-color: #0A7E07; /* Safaricom Green */
+  color: white;
+  text-align: center;
+  padding: 5px 0; /* Smaller padding */
+  font-size: 0.8rem; /* Reduced font size */
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative;
+}
+
+footer a {
+  color: #C6E6C6; /* Light green for links */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem; /* Adjust link size */
+}
+
+footer a:hover {
+  color: white; /* Change to white on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+footer .social-icons {
+  margin: 5px 0; /* Reduce spacing above social icons */
+}
+
+footer .social-icons a {
+  margin: 0 8px; /* Reduce spacing between icons */
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem; /* Smaller icon size */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #C6E6C6; /* Light green on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+footer p {
+  margin: 5px 0; /* Reduce spacing between text elements */
+  line-height: 1.2; /* Adjust line height */
+}

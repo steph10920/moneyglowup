@@ -6,45 +6,53 @@ body {
   }
   
   /* Hero Section */
-  .hero {
-    background: linear-gradient(to bottom, #0A7E07, #086005);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .hero-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-  }
-  
-  .hero-buttons button {
-    background-color: white;
-    color: #0A7E07;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .hero-buttons button:hover {
-    background-color: #C6E6C6;
-    transform: scale(1.05);
-  }
-  
+  /* Hero Section */
+.hero {
+  text-align: center;
+  padding: 40px 15px; /* Reduce vertical padding */
+  background-color: #f9f9f9; /* Light background */
+}
+
+.hero-content {
+  max-width: 800px; /* Limit the width of content */
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2rem; /* Reduce font size for heading */
+  margin-bottom: 10px; /* Reduce spacing below heading */
+  color: #0A7E07; /* Safaricom green */
+}
+
+.hero-content p {
+  font-size: 1rem; /* Reduce font size for paragraph */
+  margin-bottom: 20px; /* Adjust spacing below paragraph */
+  color: #555;
+  line-height: 1.5; /* Adjust line spacing */
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center;
+}
+
+.hero-buttons button {
+  background-color: #0A7E07; /* Safaricom green */
+  color: white;
+  padding: 8px 15px; /* Smaller button size */
+  font-size: 0.9rem; /* Smaller font size for buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #086005; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
   /* Features Section */
   .features {
     padding: 50px 20px;
@@ -105,26 +113,43 @@ body {
   }
   
   /* Testimonials Section */
-  .testimonials {
-    background-color: #0A7E07;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .testimonial-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .testimonial-card {
-    background: white;
-    color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+ /* Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px 15px; /* Reduce padding */
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1.5rem; /* Smaller heading size */
+  color: #333; /* Dark text color for readability */
+  margin-bottom: 15px; /* Reduce spacing below heading */
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Smaller gap between cards */
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 15px; /* Reduce padding */
+  width: 250px; /* Smaller width for cards */
+  font-size: 0.9rem; /* Smaller font size */
+  line-height: 1.4; /* Adjust line spacing */
+}
+
+.testimonial-card p {
+  margin-bottom: 10px; /* Reduce spacing below the testimonial text */
+  color: #555;
+}
+
+.testimonial-card span {
+  font-size: 0.85rem; /* Smaller font for names */
+  color: #777;
+  font-style: italic;
+}
