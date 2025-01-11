@@ -1,108 +1,130 @@
-/* Ensure the body and root container take up the full height of the viewport */
-html, body {
+/* General Styles */
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
   }
   
-  /* Make the main app container stretch to fill the height */
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* Main content expands to fill the available space */
-  .main-content {
-    flex: 1; /* Ensures the main content stretches to fill the remaining height */
-    padding: 20px;
-  }
+  /* Hero Section */
   .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .hero-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hero-text {
-    max-width: 400px;
-  }
-  
-  .hero-text h2 {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .hero-text p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #666;
-  }
-  
-  .hero-text button {
-    background-color: #0A7E07;
+    background: linear-gradient(to bottom, #0A7E07, #086005);
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
+    text-align: center;
+    padding: 100px 20px;
   }
   
-  .hero-text button:hover {
-    background-color: #086005;
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
   }
   
-  .hero-images {
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons {
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
   }
   
-  .hero-image {
-    max-width: 300px;
+  .hero-buttons button {
+    background-color: white;
+    color: #0A7E07;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: #C6E6C6;
+    transform: scale(1.05);
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    text-align: center;
+    width: 300px;
+    background: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .hero-image:hover {
+  .feature-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
-  /* Footer sticks to the bottom */
-  footer {
-    background-color: #0A7E07; /* Safaricom Green */
+  
+  .feature-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card h3 {
+    color: #0A7E07;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card button {
+    background-color: #0A7E07;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feature-card button:hover {
+    background-color: #086005;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    background-color: #0A7E07;
+    color: white;
+    padding: 50px 20px;
     text-align: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    flex-shrink: 0; /* Prevent footer from shrinking */
   }
   
-  footer a {
-    color: #C6E6C6;
-    text-decoration: none;
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
   
-  footer a:hover {
-    color: white;
-    text-decoration: underline;
+  .testimonial-card {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   

@@ -1,6 +1,6 @@
 import React from "react";
-import ExcelIcon from "../assets/images/excel-icon.png"; // Ensure this path is correct
-import "../styles/Resources.css"; // Import the CSS for styling
+import ExcelIcon from "../assets/images/excel-icon.png";
+import "../styles/Resources.css";
 
 const Resources = () => {
   return (
@@ -23,14 +23,10 @@ const Resources = () => {
             >
               Download
             </a>
-            <a
-              href="https://view.officeapps.live.com/op/view.aspx?src=YOUR_URL_HERE/files/Monthly%20budget.xlsx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="view-button"
-            >
+            {/* Disabled View Button */}
+            <button className="view-button disabled" disabled>
               View
-            </a>
+            </button>
           </div>
         </div>
 
@@ -49,14 +45,10 @@ const Resources = () => {
             >
               Download
             </a>
-            <a
-              href="https://view.officeapps.live.com/op/view.aspx?src=YOUR_URL_HERE/files/Weekly%20Budget%20template.xlsx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="view-button"
-            >
+            {/* Disabled View Button */}
+            <button className="view-button disabled" disabled>
               View
-            </a>
+            </button>
           </div>
         </div>
       </div>

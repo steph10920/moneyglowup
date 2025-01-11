@@ -79,30 +79,33 @@
     gap: 10px;
   }
   
-  .download-button,
-  .view-button {
-    display: inline-block;
-    background-color: #0A7E07; /* Safaricom Green */
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    flex: 1;
-    text-align: center;
-  }
-  
-  .view-button {
-    background-color: #0074CC; /* Blue for View button */
-  }
-  
-  .download-button:hover {
-    background-color: #086005; /* Darker Green */
-  }
-  
-  .view-button:hover {
-    background-color: #005B99; /* Darker Blue */
-  }
-  
+ /* General button styles */
+.download-button,
+.view-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Disabled view button */
+.view-button.disabled {
+  background-color: #ccc; /* Light gray to indicate it's disabled */
+  color: #666; /* Gray text color */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  pointer-events: none; /* Disable click events */
+}
+
+/* Download button hover effect */
+.download-button {
+  background-color: #0A7E07; /* Safaricom Green */
+  color: white;
+}
+
+.download-button:hover {
+  background-color: #086005; /* Darker green on hover */
+}
