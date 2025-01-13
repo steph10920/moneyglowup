@@ -6,19 +6,10 @@ import Solutions from "./components/Solutions";
 import Resources from "./components/Resources";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
-// Import assets
-import Image1 from "./assets/images/image1.jpg";
-import Image2 from "./assets/images/image2.jpg";
+import ExcelIcon from "./assets/images/excel-icon.png"; // Import the Excel icon
 import "./styles/App.css";
 
 const App = () => {
-  const handleScrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <Router>
       <Header />
@@ -35,7 +26,7 @@ const App = () => {
                     <h1>Take Charge of Your Financial Freedom</h1>
                     <p>Empowering you to achieve financial independence and wealth creation.</p>
                     <div className="hero-buttons">
-                      <button onClick={() => handleScrollToSection("solutions-section")}>
+                      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         Explore Solutions
                       </button>
                       <Link to="/contact">
@@ -44,12 +35,13 @@ const App = () => {
                     </div>
                   </div>
                 </section>
+
                 {/* Features Section */}
                 <section id="features-section" className="features">
                   <h2>Our Services</h2>
                   <div className="feature-cards">
                     <div className="feature-card">
-                      <img src={Image1} alt="Solutions" />
+                      <img src="./assets/images/image1.jpg" alt="Solutions" />
                       <h3>Solutions</h3>
                       <p>Discover actionable strategies to grow and manage your wealth.</p>
                       <Link to="/solutions">
@@ -57,7 +49,7 @@ const App = () => {
                       </Link>
                     </div>
                     <div className="feature-card">
-                      <img src={Image2} alt="Resources" />
+                      <img src="./assets/images/image2.jpg" alt="Resources" />
                       <h3>Resources</h3>
                       <p>Access tools and templates for financial planning and budgeting.</p>
                       <Link to="/resources">
@@ -74,17 +66,39 @@ const App = () => {
                   </div>
                 </section>
 
-                {/* Testimonials Section */}
-                <section id="testimonials-section" className="testimonials">
-                  <h2>What Our Clients Say</h2>
-                  <div className="testimonial-cards">
-                    <div className="testimonial-card">
-                      <p>"This platform transformed my financial habits. Highly recommended!"</p>
-                      <span>- John Doe</span>
+                {/* Resources Section */}
+                <section id="resources-section" className="resources">
+                  <h2>Budget Templates</h2>
+                  <p>Download our easy-to-use budget templates to plan your finances effectively.</p>
+                  <div className="template-container">
+                    <div className="template-card">
+                      <div className="template-header">
+                        <img src={ExcelIcon} alt="Excel Icon" className="template-icon" />
+                        <h3>Monthly Budget Template</h3>
+                      </div>
+                      <p>Organize your monthly finances with this detailed Excel sheet.</p>
+                      <a
+                        href="/files/Monthly budget.xlsx"
+                        download
+                        className="download-button"
+                      >
+                        Download
+                      </a>
                     </div>
-                    <div className="testimonial-card">
-                      <p>"Thanks to their resources, I now have a clear financial roadmap."</p>
-                      <span>- Jane Smith</span>
+
+                    <div className="template-card">
+                      <div className="template-header">
+                        <img src={ExcelIcon} alt="Excel Icon" className="template-icon" />
+                        <h3>Weekly Budget Template</h3>
+                      </div>
+                      <p>Plan your weekly expenses to stay on top of your financial goals.</p>
+                      <a
+                        href="/files/Weekly Budget template.xlsx"
+                        download
+                        className="download-button"
+                      >
+                        Download
+                      </a>
                     </div>
                   </div>
                 </section>
@@ -97,6 +111,7 @@ const App = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
+
           <Route
             path="*"
             element={
