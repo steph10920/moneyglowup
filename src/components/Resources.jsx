@@ -76,7 +76,7 @@ const Resources = () => {
           "Monthly Budget Template",
           "Organize your monthly finances with this easy-to-use Excel sheet.",
           "/files/Monthly budget.xlsx",
-          350
+          1000
         )}
         {renderResourceCard(
           "Weekly Budget Template",
