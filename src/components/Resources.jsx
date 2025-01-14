@@ -5,15 +5,21 @@ import "../styles/Resources.css";
 
 const Resources = () => {
   const [paidItems, setPaidItems] = useState([]); // Track paid items
+  const backendURL = "https://https://moneyglowup-backend.vercel.app//api/pay"; // Replace with your backend URL
 
   // Handle MPESA Payment
   const handlePayment = async (item) => {
-    const phone = prompt("Enter your MPESA phone number (e.g., 2547XXXXXXXX):");
-    if (!phone) return;
+    const phone = prompt(
+      "Enter your MPESA phone number (e.g., 2547XXXXXXXX):"
+    );
+    if (!phone || !/^2547\d{8}$/.test(phone)) {
+      alert("Please enter a valid MPESA phone number starting with 2547.");
+      return;
+    }
 
     try {
       // Send payment request to backend
-      const response = await axios.post("http://localhost:5000/api/pay", {
+      const response = await axios.post(backendURL, {
         phone,
         amount: item.price,
         item: item.title,
@@ -26,7 +32,7 @@ const Resources = () => {
         alert("Payment failed. Please try again.");
       }
     } catch (error) {
-      console.error("Payment Error:", error.message);
+      console.error("Payment Error:", error.response?.data || error.message);
       alert("Payment failed. Please try again.");
     }
   };
@@ -53,9 +59,7 @@ const Resources = () => {
           ) : (
             <button
               className="purchase-button"
-              onClick={() =>
-                handlePayment({ title, price, filePath })
-              }
+              onClick={() => handlePayment({ title, price, filePath })}
             >
               Purchase
             </button>
