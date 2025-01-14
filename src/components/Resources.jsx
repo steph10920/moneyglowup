@@ -5,20 +5,20 @@ import "../styles/Resources.css";
 
 const Resources = () => {
   const [paidItems, setPaidItems] = useState([]); // Track paid items
-  const backendURL = "https://https://moneyglowup-backend.vercel.app//api/pay"; // Replace with your backend URL
+  const backendURL = "https://moneyglowup-backend.vercel.app/api/pay"; // Replace with your backend URL
 
   // Handle MPESA Payment
   const handlePayment = async (item) => {
-    const phone = prompt(
-      "Enter your MPESA phone number (e.g., 2547XXXXXXXX):"
-    );
+    const phone = prompt("Enter your MPESA phone number (e.g., 2547XXXXXXXX):");
+
+    // Validate the phone number format
     if (!phone || !/^2547\d{8}$/.test(phone)) {
       alert("Please enter a valid MPESA phone number starting with 2547.");
       return;
     }
 
     try {
-      // Send payment request to backend
+      // Send payment request to the backend
       const response = await axios.post(backendURL, {
         phone,
         amount: item.price,
@@ -29,11 +29,11 @@ const Resources = () => {
         alert("Payment successful! You can now download your file.");
         setPaidItems([...paidItems, item.title]); // Mark item as paid
       } else {
-        alert("Payment failed. Please try again.");
+        alert(response.data.message || "Payment failed. Please try again.");
       }
     } catch (error) {
       console.error("Payment Error:", error.response?.data || error.message);
-      alert("Payment failed. Please try again.");
+      alert("Payment failed. Please check your connection and try again.");
     }
   };
 
@@ -53,10 +53,12 @@ const Resources = () => {
         </p>
         <div className="action-buttons">
           {isPaid ? (
+            // If paid, allow downloading
             <a href={filePath} download className="download-button">
               Download
             </a>
           ) : (
+            // Otherwise, show the purchase button
             <button
               className="purchase-button"
               onClick={() => handlePayment({ title, price, filePath })}
