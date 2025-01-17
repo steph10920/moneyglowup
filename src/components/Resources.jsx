@@ -5,7 +5,7 @@ import "../styles/Resources.css";
 
 const Resources = () => {
   const [paidItems, setPaidItems] = useState([]); // Track paid items
-  const backendURL = "https://moneyglowup-mpesa1-backend.vercel.app/api/pay"; // Replace with your backend URL
+  const backendURL = "https://moneyglowup-daraja-backend.vercel.app/api/pay"; // Replace with your backend URL
 
   // Handle MPESA Payment
   const handlePayment = async (item) => {
