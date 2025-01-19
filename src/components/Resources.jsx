@@ -5,49 +5,47 @@ import MonthlyBudgetCover from "../assets/images/monthly-budget-cover.png";
 import WeeklyBudgetCover from "../assets/images/weekly-budget-cover.png";
 
 const Resources = () => {
+  const resources = [
+    {
+      title: "Monthly Budget Template",
+      description: "Organize your monthly finances with this easy-to-use Excel sheet.",
+      coverImage: MonthlyBudgetCover,
+      link: "https://your-monthly-budget-link.com", // Replace with the actual OneDrive link
+    },
+    {
+      title: "Weekly Budget Template",
+      description: "Plan your weekly expenses and stay on top of your finances.",
+      coverImage: WeeklyBudgetCover,
+      link: "https://your-weekly-budget-link.com", // Replace with the actual OneDrive link
+    },
+  ];
+
   return (
     <div className="resources">
       <h1>Resources</h1>
       <p>Explore our curated financial resources to empower your journey.</p>
 
-      {/* Display Monthly Budget */}
+      {/* Render Resources */}
       <div className="template-container">
-        <div className="template-card">
-          <h3>Monthly Budget Template</h3>
-          <p>Organize your monthly finances with this easy-to-use Excel sheet.</p>
-          <div className="iframe-container">
-            <a
-              href="https://1drv.ms/x/c/961806e07dee157d/EZUiGugdDrhHrCdqI-q44u0BbHucNe2BWPGevtwISuCdTw?e=OBihxE" // Replace this with the correct updated OneDrive link for the Monthly Budget
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={MonthlyBudgetCover}
-                alt="Monthly Budget Cover"
-                className="template-cover"
-              />
-            </a>
+        {resources.map((resource, index) => (
+          <div className="template-card" key={index}>
+            <h3>{resource.title}</h3>
+            <p>{resource.description}</p>
+            <div className="iframe-container">
+              <a
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={resource.coverImage}
+                  alt={`${resource.title} Cover`}
+                  className="template-cover"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-
-        {/* Display Weekly Budget */}
-        <div className="template-card">
-          <h3>Weekly Budget Template</h3>
-          <p>Plan your weekly expenses and stay on top of your finances.</p>
-          <div className="iframe-container">
-            <a
-              href="https://1drv.ms/x/c/961806e07dee157d/ESvWsFYNdZZLoQYN_X5WWe8BnWx5aXThVNcKrO0S_9O2yg?e=V9liRd" // Replace this with the correct updated OneDrive link for the Weekly Budget
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={WeeklyBudgetCover}
-                alt="Weekly Budget Cover"
-                className="template-cover"
-              />
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
