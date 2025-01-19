@@ -1,47 +1,50 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Hero Section */
-  /* Hero Section */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
-  padding: 40px 15px; /* Reduce vertical padding */
-  background-color: #f9f9f9; /* Light background */
+  padding: 40px 15px;
+  background-color: #f9f9f9;
 }
 
 .hero-content {
-  max-width: 800px; /* Limit the width of content */
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 2rem; /* Reduce font size for heading */
-  margin-bottom: 10px; /* Reduce spacing below heading */
-  color: #0A7E07; /* Safaricom green */
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0A7E07;
 }
 
 .hero-content p {
-  font-size: 1rem; /* Reduce font size for paragraph */
-  margin-bottom: 20px; /* Adjust spacing below paragraph */
+  font-size: 1rem;
+  margin-bottom: 20px;
   color: #555;
-  line-height: 1.5; /* Adjust line spacing */
+  line-height: 1.5;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 10px; /* Space between buttons */
+  gap: 10px;
   justify-content: center;
 }
 
 .hero-buttons button {
-  background-color: #0A7E07; /* Safaricom green */
+  background-color: #0A7E07;
   color: white;
-  padding: 8px 15px; /* Smaller button size */
-  font-size: 0.9rem; /* Smaller font size for buttons */
+  padding: 8px 15px;
+  font-size: 0.9rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -49,135 +52,133 @@ body {
 }
 
 .hero-buttons button:hover {
-  background-color: #086005; /* Darker green on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #086005;
+  transform: scale(1.05);
 }
 
-  /* Features Section */
- /* Features Section - Our Services */
-/* Features Section - Our Services */
+/* Features Section */
 .features {
   text-align: center;
-  padding: 20px 10px; /* Further reduce vertical padding */
-  background-color: #f9f9f9; /* Light background */
+  padding: 20px 10px;
+  background-color: #f9f9f9;
 }
 
 .features h2 {
-  font-size: 1.5rem; /* Smaller heading size */
-  color: #0A7E07; /* Safaricom Green */
-  margin-bottom: 15px; /* Reduce spacing below heading */
+  font-size: 1.5rem;
+  color: #0A7E07;
+  margin-bottom: 15px;
 }
 
 .feature-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Reduce gap between cards */
+  gap: 10px;
   justify-content: center;
 }
 
 .feature-card {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 10px; /* Smaller padding inside cards */
-  width: 200px; /* Smaller card width */
-  font-size: 0.8rem; /* Smaller text size */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 200px;
   text-align: center;
+  font-size: 0.8rem;
 }
 
 .feature-card img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px; /* Slightly rounded corners */
-  margin-bottom: 8px; /* Reduce spacing below image */
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
 
 .feature-card h3 {
-  font-size: 1rem; /* Smaller card heading size */
+  font-size: 1rem;
   color: #333;
   margin-bottom: 8px;
 }
 
 .feature-card p {
-  font-size: 0.8rem; /* Smaller paragraph font size */
+  font-size: 0.8rem;
   color: #555;
-  margin-bottom: 10px; /* Reduce spacing below text */
-  line-height: 1.4; /* Adjust line height */
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .feature-card button {
-  background-color: #0A7E07; /* Safaricom Green */
+  background-color: #0A7E07;
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 6px 10px; /* Smaller button size */
-  font-size: 0.75rem; /* Smaller button text size */
+  padding: 6px 10px;
+  font-size: 0.75rem;
   cursor: pointer;
 }
 
 .feature-card button:hover {
-  background-color: #086005; /* Darker green on hover */
+  background-color: #086005;
 }
 
-  
-  /* Testimonials Section */
- /* Testimonials Section */
+/* Testimonials Section */
 .testimonials {
-  background-color: #f9f9f9; /* Light background for contrast */
-  padding: 20px 15px; /* Reduce padding */
+  background-color: #f9f9f9;
+  padding: 20px 15px;
   text-align: center;
 }
 
 .testimonials h2 {
-  font-size: 1.5rem; /* Smaller heading size */
-  color: #333; /* Dark text color for readability */
-  margin-bottom: 15px; /* Reduce spacing below heading */
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .testimonial-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px; /* Smaller gap between cards */
+  gap: 15px;
 }
 
 .testimonial-card {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 15px; /* Reduce padding */
-  width: 250px; /* Smaller width for cards */
-  font-size: 0.9rem; /* Smaller font size */
-  line-height: 1.4; /* Adjust line spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 250px;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .testimonial-card p {
-  margin-bottom: 10px; /* Reduce spacing below the testimonial text */
+  margin-bottom: 10px;
   color: #555;
 }
 
 .testimonial-card span {
-  font-size: 0.85rem; /* Smaller font for names */
+  font-size: 0.85rem;
   color: #777;
   font-style: italic;
 }
+
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
-  top: 0;
-  right: -400px; /* Initially hidden */
+  top: 80px; /* Adjusted to fit under the header */
+  right: -400px; /* Hidden initially */
   width: 400px;
-  height: 100%;
+  max-height: 600px; /* Limit height */
   background-color: #f9f9f9;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   transition: right 0.3s ease;
   z-index: 1000;
   padding: 20px;
+  border-radius: 8px;
 }
 
 .sidebar.open {
-  right: 0; /* Slide in */
+  right: 0; /* Slides into view */
 }
 
 .sidebar-content {
@@ -217,6 +218,7 @@ body {
 .close-button {
   background-color: #ccc;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .open-sidebar-button {
