@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Solutions from "./components/Solutions";
@@ -12,9 +13,60 @@ import "./styles/App.css";
 
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false); // Sidebar visibility state
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    template: "",
+    phone: "",
+  });
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, template, phone } = formData;
+
+    // Replace these with your EmailJS credentials
+    const serviceID = "service_btrc3kb";
+    const templateID = "template_2xu5rld";
+    const userID = "-W_tLO5PFEBi-n2er";
+
+    const templateParams = {
+      name,
+      email,
+      template,
+      phone,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then((response) => {
+        alert("Your message has been sent successfully!");
+        console.log("Success:", response.status, response.text);
+      })
+      .catch((error) => {
+        alert("Failed to send the message. Please try again later.");
+        console.error("Error:", error);
+      });
+
+    // Reset the form
+    setFormData({
+      name: "",
+      email: "",
+      template: "",
+      phone: "",
+    });
+
+    // Close the sidebar
+    setSidebarOpen(false);
   };
 
   return (
@@ -87,7 +139,7 @@ const App = () => {
                       <p>Organize your monthly finances with this detailed Excel sheet.</p>
                       <div className="iframe-container">
                         <a
-                          href="" // Add the link to the OneDrive or embedded resource
+                          href="https://1drv.ms/x/s!example_link"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -105,7 +157,7 @@ const App = () => {
                       <p>Plan your weekly expenses to stay on top of your financial goals.</p>
                       <div className="iframe-container">
                         <a
-                          href="" // Add the link to the OneDrive or embedded resource
+                          href="https://1drv.ms/x/s!example_link"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -148,15 +200,42 @@ const App = () => {
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <div className="sidebar-content">
           <h2>Request Budget Templates</h2>
-          <form className="submit-form">
+          <form className="submit-form" onSubmit={handleSubmit}>
             <label>Name:</label>
-            <input type="text" placeholder="Enter your name" required />
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
             <label>Email:</label>
-            <input type="email" placeholder="Enter your email" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
             <label>Phone Number:</label>
-            <input type="tel" placeholder="Enter your phone number" required />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter your phone number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
             <label>Select Template:</label>
-            <select>
+            <select
+              name="template"
+              value={formData.template}
+              onChange={handleChange}
+              required
+            >
+              <option value="">-- Select Template --</option>
               <option value="Monthly Budget">Monthly Budget</option>
               <option value="Weekly Budget">Weekly Budget</option>
             </select>
