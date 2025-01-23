@@ -2,7 +2,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
 }
 
 .main-content {
@@ -12,108 +15,114 @@ body {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 40px 15px;
-  background-color: #f9f9f9;
+  padding: 50px 20px;
+  background-color: #eef6f0;
+  border-bottom: 2px solid #ddd;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #0A7E07;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #0a7e07;
 }
 
 .hero-content p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
 }
 
 .hero-buttons button {
-  background-color: #0A7E07;
+  background-color: #0a7e07;
   color: white;
-  padding: 8px 15px;
-  font-size: 0.9rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-buttons button:hover {
   background-color: #086005;
-  transform: scale(1.05);
+  transform: translateY(-3px);
 }
 
 /* Features Section */
 .features {
-  text-align: center;
-  padding: 20px 10px;
-  background-color: #f9f9f9;
+  padding: 40px 20px;
+  background-color: #fff;
 }
 
 .features h2 {
-  font-size: 1.5rem;
-  color: #0A7E07;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #0a7e07;
+  margin-bottom: 25px;
 }
 
 .feature-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .feature-card {
-  background-color: white;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
-  font-size: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .feature-card img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
-  margin-bottom: 8px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .feature-card h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .feature-card p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #555;
-  margin-bottom: 10px;
-  line-height: 1.4;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .feature-card button {
-  background-color: #0A7E07;
+  background-color: #0a7e07;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 6px 10px;
-  font-size: 0.75rem;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .feature-card button:hover {
@@ -122,102 +131,118 @@ body {
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #f9f9f9;
-  padding: 20px 15px;
+  background-color: #eef6f0;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .testimonials h2 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #0a7e07;
+  margin-bottom: 20px;
 }
 
 .testimonial-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .testimonial-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  width: 250px;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
 }
 
 .testimonial-card p {
-  margin-bottom: 10px;
   color: #555;
+  margin-bottom: 15px;
 }
 
 .testimonial-card span {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #777;
   font-style: italic;
+}
+
+.testimonial-card::after {
+  content: "”";
+  font-size: 3rem;
+  color: #0a7e07;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-weight: bold;
 }
 
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
-  top: 80px; /* Adjusted to fit under the header */
-  right: -400px; /* Hidden initially */
+  top: 100px;
+  right: -400px;
   width: 400px;
-  max-height: 600px; /* Limit height */
+  max-height: 600px;
   background-color: #f9f9f9;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
-  transition: right 0.3s ease;
+  transition: right 0.4s ease;
   z-index: 1000;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 12px;
 }
 
 .sidebar.open {
-  right: 0; /* Slides into view */
+  right: 20px;
 }
 
 .sidebar-content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .sidebar-content h2 {
   margin: 0;
   color: #0a7e07;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .sidebar-content input,
 .sidebar-content select {
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .sidebar-content button {
   background-color: #0a7e07;
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar-content button:hover {
   background-color: #086005;
+  transform: translateY(-3px);
 }
 
 .close-button {
   background-color: #ccc;
-  margin-top: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -228,9 +253,11 @@ body {
   background-color: #0a7e07;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border-radius: 50px;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   z-index: 1000;
+  font-weight: bold;
 }

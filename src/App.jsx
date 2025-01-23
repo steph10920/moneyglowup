@@ -210,6 +210,7 @@ const App = () => {
               onChange={handleChange}
               required
             />
+            <br></br>
             <label>Email:</label>
             <input
               type="email"
@@ -219,6 +220,7 @@ const App = () => {
               onChange={handleChange}
               required
             />
+            <br></br>
             <label>Phone Number:</label>
             <input
               type="tel"
@@ -228,6 +230,7 @@ const App = () => {
               onChange={handleChange}
               required
             />
+            <br></br>
             <label>Select Template:</label>
             <select
               name="template"
@@ -239,6 +242,7 @@ const App = () => {
               <option value="Monthly Budget">Monthly Budget</option>
               <option value="Weekly Budget">Weekly Budget</option>
             </select>
+            <br></br>
             <button type="submit">Submit</button>
           </form>
           <button className="close-button" onClick={toggleSidebar}>
