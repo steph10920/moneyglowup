@@ -12,7 +12,7 @@ import WeeklyBudgetCover from "./assets/images/weekly-budget-cover.png";
 import "./styles/App.css";
 
 const App = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false); // Sidebar visibility state
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,7 +34,6 @@ const App = () => {
 
     const { name, email, template, phone } = formData;
 
-    // Replace these with your EmailJS credentials
     const serviceID = "service_btrc3kb";
     const templateID = "template_2xu5rld";
     const userID = "-W_tLO5PFEBi-n2er";
@@ -57,7 +56,6 @@ const App = () => {
         console.error("Error:", error);
       });
 
-    // Reset the form
     setFormData({
       name: "",
       email: "",
@@ -65,7 +63,6 @@ const App = () => {
       phone: "",
     });
 
-    // Close the sidebar
     setSidebarOpen(false);
   };
 
@@ -74,12 +71,10 @@ const App = () => {
       <Header />
       <main className="main-content">
         <Routes>
-          {/* Home Route */}
           <Route
             path="/"
             element={
               <>
-                {/* Hero Section */}
                 <section id="hero" className="hero">
                   <div className="hero-content">
                     <h1>Take Charge of Your Financial Freedom</h1>
@@ -97,7 +92,6 @@ const App = () => {
                   </div>
                 </section>
 
-                {/* Features Section */}
                 <section id="features-section" className="features">
                   <h2>Our Services</h2>
                   <div className="feature-cards">
@@ -127,7 +121,6 @@ const App = () => {
                   </div>
                 </section>
 
-                {/* Budget Templates Section */}
                 <section id="resources-section" className="resources">
                   <h2>Budget Templates</h2>
                   <p>
@@ -175,7 +168,6 @@ const App = () => {
             }
           />
 
-          {/* Other Routes */}
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/pricing" element={<Pricing />} />
@@ -197,59 +189,57 @@ const App = () => {
       </main>
 
       {/* Sidebar for Submit Form */}
-      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
-        <div className="sidebar-content">
-          <h2>Request Budget Templates</h2>
-          <form className="submit-form" onSubmit={handleSubmit}>
-            <label>Name:</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <br></br>
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <br></br>
-            <label>Phone Number:</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter your phone number"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-            <br></br>
-            <label>Select Template:</label>
-            <select
-              name="template"
-              value={formData.template}
-              onChange={handleChange}
-              required
-            >
-              <option value="">-- Select Template --</option>
-              <option value="Monthly Budget">Monthly Budget</option>
-              <option value="Weekly Budget">Weekly Budget</option>
-            </select>
-            <br></br>
-            <button type="submit">Submit</button>
-          </form>
-          <button className="close-button" onClick={toggleSidebar}>
-            Close
-          </button>
+      {isSidebarOpen && (
+        <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+          <div className="sidebar-content">
+            <h2>Request Budget Templates</h2>
+            <form className="submit-form" onSubmit={handleSubmit}>
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <label>Phone Number:</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+              <label>Select Template:</label>
+              <select
+                name="template"
+                value={formData.template}
+                onChange={handleChange}
+                required
+              >
+                <option value="">-- Select Template --</option>
+                <option value="Monthly Budget">Monthly Budget</option>
+                <option value="Weekly Budget">Weekly Budget</option>
+              </select>
+              <button type="submit">Submit</button>
+            </form>
+            <button className="close-button" onClick={toggleSidebar}>
+              Close
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Button to Open Sidebar */}
       <button className="open-sidebar-button" onClick={toggleSidebar}>
